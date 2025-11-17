@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+ vector<int>a(5, 1);
+ vector<int>l(a);
+ for(int v : l) {
+  cout << v << " ";
+ }
+ cout << endl;
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(4);
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(5);
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(5);
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(5);
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(5);
+ cout << l.capacity() << " " << l.size() << endl;
+ l.push_back(50);
+ cout << l.capacity() << " " << l.size() << endl;
+ for(int v : l) {
+  cout << v << " ";
+ }cout << endl;
+
+ cout << l[2] << endl;
+ cout << l.front() << endl;
+ cout << l.back() << endl;
+ l.pop_back();
+ cout << l.back() << endl;
+ l.clear();
+
+ for(int v : l) {
+  cout << v << " ";
+ }cout << endl;
+ return 0;
+}
