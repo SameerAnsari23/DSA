@@ -1,0 +1,23 @@
+class Solution {
+public: 
+    int solve(TreeNode* root, int &maxi) {
+        // Base case
+        if(root == NULL) return 0;
+
+        // Left part
+        int left = max(0, solve(root->left, maxi));
+
+        // explore right part
+        int right = max(0, solve(root->right, maxi));
+
+        // calculate maxi
+        maxi = max(maxi, left + right + root->val);
+
+        return max(left, right) + root->val;
+    }
+    int maxPathSum(TreeNode* root) {
+        int maxi = INT_MIN;
+        solve(root, maxi);
+        return maxi;
+    }
+};
