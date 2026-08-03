@@ -5,7 +5,7 @@ bool isSorted(vector<int>& arr, int i) {
  //base case
  if (i == arr.size()-1) return true;
  if (arr[i] > arr[i+1]) return false;
- isSorted(arr, i+1);
+ return isSorted(arr, i+1);
 }
 
 int main() {
